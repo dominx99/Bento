@@ -1,8 +1,6 @@
-// Store the theme
 let darkTheme = localStorage.getItem("darkTheme");
 const themeToggle = document.querySelector("#themeButton");
 
-// Apply Dark theme
 const enableDark = () => {
   document.body.classList.add("darktheme");
   localStorage.setItem("darkTheme", "enabled");
@@ -10,7 +8,6 @@ const enableDark = () => {
   feather.replace();
 };
 
-// Remove Dark theme
 const disableDark = () => {
   document.body.classList.remove("darktheme");
   localStorage.setItem("darkTheme", null);
@@ -18,7 +15,6 @@ const disableDark = () => {
   feather.replace();
 };
 
-//Toggle theme
 if (darkTheme === "enabled") {
   enableDark();
 } else {
@@ -33,15 +29,3 @@ themeToggle.addEventListener("click", () => {
     disableDark();
   }
 });
-
-// Theme accordint the hour
-
-/*
-const today = new Date();
-
-if (hour >= 19 || hour < 5) {
-    enableDark();
-} else {
-    disableDark();
-}
-*/

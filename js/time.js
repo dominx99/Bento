@@ -15,7 +15,6 @@ function displayClock() {
     'Dec',
   ];
 
-  // Set to true to use a 12 hour date format
   var format_12hour = false;
 
   var d = new Date();
